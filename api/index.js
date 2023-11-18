@@ -1,8 +1,10 @@
 import express from 'express';
 import mongoose from 'mongoose';
+import dotenv from 'dotenv';
 
+dotenv.config();
 
-mongoose.connect("mongodb+srv://adi:adi@mernestate.iffjm3n.mongodb.net/mern-estate?retryWrites=true&w=majority").then(()=>{
+mongoose.connect("process.env.MONGO").then(()=>{
     console.log('Connected to Mongo')
 })
 
